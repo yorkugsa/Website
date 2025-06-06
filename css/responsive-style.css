@@ -67,6 +67,21 @@
         padding-top: 12.5rem;
         padding-bottom: 3rem;
     }
+
+    /* Past Events Page */
+    .event_section .event-card img {
+    max-height: 250px;
+    }
+    .event_section h2 {
+        font-size: 2rem;
+    }
+    .event_section .event-content {
+        padding: 1.8rem 2rem;
+    }
+    .event_section .event-details p {
+        font-size: 1.1rem;
+    }
+
 }
 
 /* Media Query 767px */
@@ -96,7 +111,48 @@
     background: url('/images/banner-slide/Banner-tablet.jpg') no-repeat center center;
     background-size: cover;
     }
-}
+
+    .about_section .section-title {
+    font-size: 2.2rem;
+    } 
+
+    .about_section .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .about_section .about-details p {
+        font-size: 0.95rem;
+    }
+
+    .team-card {
+    padding: 1.2rem 1rem 1.5rem;
+    }
+
+    .team-img-wrapper {
+        width: 110px;
+        height: 110px;
+    }
+
+    /* contact page */
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.1rem;
+    }
+    
+    .contact-form .main-btn {
+        font-size: 1.5rem;
+        padding: 0.8rem 1.8rem;
+    }
+
+    .info-box li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-box i {
+        margin-bottom: 0.8rem;
+    }
+} 
 
 /* Media Query 590px */
 @media (max-width:590px) {
@@ -107,10 +163,52 @@
     background-size: cover;
     }
 
-    /* General CSS */
+    /* Team page CSS */
     body,
     html {
         font-size: 7px;
+    }
+
+    .team-img-wrapper {
+    width: 90px;
+    height: 90px;
+    }
+
+    .team-name {
+        font-size: 1.1rem;
+    }
+
+    .team-program {
+        font-size: 0.9rem;
+    }
+
+    /* Past Events Page */
+    .event_section .event-card img {
+    max-height: 200px;
+    }
+    .event_section h2 {
+        font-size: 1.8rem;
+    }
+    .event_section .event-content {
+        padding: 1.2rem 1.5rem;
+    }
+    .event_section .event-details p {
+        font-size: 1rem;
+    }
+    .event_section .btn.main-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Contact Page */
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .contact-form .main-btn {
+        font-size: 1.4rem;
+        padding: 0.6rem 1.5rem;
     }
 }
 

@@ -186,7 +186,7 @@ section {
     margin-bottom: 1.5rem;
 }
 
-.about .banner_section,
+/* .about .banner_section,
 .product .banner_section,
 .gallery .banner_section,
 .contact .banner_section,
@@ -198,7 +198,7 @@ section {
     padding-top: 17rem;
     padding-bottom: 10rem;
     min-height: auto;
-}
+} */
 
 .contact .contact-form,
 .distributors .contact-form {
@@ -597,55 +597,382 @@ section {
 }
 
 /* ===========================
-About Page CSS
+Team Page CSS
 ============================== */
 
-.about .about-details p {
-    color: var(--primary-text);
+/* General Cleanup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+/* Remove horizontal scroll */
+body {
+  overflow-x: hidden;
+  /* background-color: rgb(8, 96, 8); */
+}
+
+.team_section {
+  padding: 3rem 0;
+  background: #eefeea;
+  color: var(--primary-text, #03262c);
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #014d28;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  color: #3a6f47;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.team-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(1, 77, 40, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: default;
+  text-align: center;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 30px rgba(1, 77, 40, 0.3);
+}
+
+.team-img-wrapper {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(1, 77, 40, 0.25);
+}
+
+.team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.1);
+}
+
+.team-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #014d28;
+  margin-bottom: 0.3rem;
+}
+
+.team-program {
+  font-size: 1rem;
+  color: #3a6f47;
+  font-style: italic;
+}
+
+.team-position {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #026633; /* Dark green accent */
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.team-name,
+.team-position,
+.team-program {
+  margin-bottom: 0.3rem;
+}
+
+.section-subtitle {
+  margin-bottom: 1.5rem; /* reduce from 3rem to 1.5rem or less */
+}
+
+.team_section > .container {
+  margin-top: 0; /* remove any top margin */
+  padding-top: 0; /* remove any top padding */
+}
+
+.team_section .row:first-child {
+  margin-top: 0; /* remove margin above first row */
+}
+
+.row.justify-content-center {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* .col-lg-2, .col-md-4, .col-sm-6 {
+  display: flex;
+} */
+
+
+
+
+/* ===========================
+Past Events Page CSS
+============================== */
+
+/* Event Card Border Animation Container */
+.event-card-border {
+    border: 10px ridge transparent;
+    border-radius: 15px;
+    transition: border-color 1s ease, transform 0.6s ease;
+}
+
+/* When in view */
+.event-card-border.animate-border {
+    border-color: #026033;
+    transform: scale(1.02);
+}
+
+/* Image Inside Card */
+.event_section .event-card img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(1, 77, 40, 0.15);
+    transition: transform 0.4s ease;
+    /* padding: 5px; */
+}
+
+.event_section .event-card img:hover {
+    transform: scale(1.10);
+}
+
+.event-card-border.animate-border:hover {
+    border: none;
+}
+
+/* Event Content Card */
+.event_section .event-content {
+    background: rgba(1, 77, 40, 0.08);
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(1, 77, 40, 0.12);
+    transition: background 0.3s ease;
+}
+
+.event_section .event-content:hover {
+    background: rgba(1, 77, 40, 0.15);
+}
+
+/* Event Title */
+.event_section h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #1d5e3b; /* Softer green */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Animated Underline Span */
+.underline-animated {
+    position: relative;
+    display: inline-block;
+    color: #1d5e3b;
+    transition: text-shadow 0.6s ease-in-out;
+}
+
+/* Line Animation */
+.underline-animated::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #1d5e3b;
+    bottom: -10px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease-in-out;
+    box-shadow: none;
+}
+
+/* When animated */
+.underline-animated.animate {
+    text-shadow: 0 0 6px rgba(13, 71, 46, 0.5);
+}
+
+.underline-animated.animate::after {
+    transform: scaleX(1);
+}
+
+/* Event Descriptions */
+.event_section .event-details p {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    margin-bottom: 1.3rem;
+    line-height: 1.7;
+    font-size: 1.3rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    color: #0c3d18;
+    transition: box-shadow 0.3s ease;
+}
+
+.event_section .event-details p:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional button styling */
+.event_section .btn.main-btn {
+    background-color: #014d28;
+    color: #fff;
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    box-shadow: 0 6px 15px rgba(1, 77, 40, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.event_section .btn.main-btn:hover {
+    background-color: #02321a;
+    box-shadow: 0 8px 25px rgba(1, 77, 40, 0.5);
+}
+
+
 
 /* ===========================
 Contact Page CSS
 ============================== */
-.contact .contact-form textarea {
-    min-height: 15rem;
+
+/* Contact Section */
+.contact_section {
+  background: #f5f9f7;
+  padding: 5rem 0;
 }
 
-.contact .content-box .info-box li {
-    position: relative;
-    padding-left: 7rem;
-    padding-bottom: 3.5rem;
-    margin-bottom: 2.9rem;
+/* Form Styling */
+.contact-form input,
+.contact-form textarea {
+  background: #fff;
+  border: 2px solid #dbe7e1;
+  padding: 1rem 1.2rem;              /* Slightly more padding for comfort */
+  font-size: 1.5rem;
+  border-radius: 12px;              /* Slightly more rounded */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* subtle shadow for depth */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: vertical;
 }
 
-.contact .content-box .info-box li i {
-    position: absolute;
-    left: 0;
-    top: 1.5rem;
-    font-size: 4.5rem;
-    line-height: 4.5rem;
-    color: var(--primary-text);
-}
-
-.contact .content-box .info-box li p {
-    color: var(--primary-text);
-}
-
-.contact .content-box .info-box li a {
-    color: var(--dark-color);
-    font-size: 2.5rem;
-    font-weight: 400;
-    margin-bottom: 0;
-    font-family: var(--secondary-font);
+.contact-form input:hover,
+.contact-form textarea:hover {
+  border-color: #20a168;
+  cursor: text;
 }
 
 
-/* ===========================
-Product Page CSS
-============================== */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #014d28;
+  box-shadow: 0 0 8px rgba(1, 77, 40, 0.4);
+  outline: none;
+}
 
-.product .product-details p {
-    margin-bottom: 1.5rem;
+/* Button */
+.contact-form .main-btn {
+  background-color: #014d28;
+  color: #fff;
+  padding: 0.9rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  box-shadow: 0 6px 15px rgba(1, 77, 40, 0.35);
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
 
+.contact-form .main-btn:hover {
+  background-color: #023c1e;
+  box-shadow: 0 8px 25px rgba(1, 77, 40, 0.55);
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
+/* Contact Info Box */
+.info-box {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-box li {
+  background: #ffffff;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.8rem;
+  border-left: 6px solid #014d28;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-box li:hover {
+  transform: translateY(-5px);
+}
+
+.info-box i {
+  font-size: 2.4rem;
+  color: #014d28;
+  min-width: 40px;
+  text-align: center;
+}
+
+.info-box p {
+  margin: 0;
+  font-weight: 600;
+  color: #014d28;
+  font-size: 1.7rem;
+  flex: 1;
+}
+
+.info-box a {
+  font-size: 1.7rem;
+  color: #333;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.info-box a:hover {
+  color: #2b7fdf;
 }

@@ -6,6 +6,11 @@
     <title>YGSA</title>
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon" >
 
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+
     <!-- Lightbox Pupup -->
     <link rel="stylesheet" href="css/lightbox.css">
 
@@ -22,13 +27,13 @@
 </head>
 
 <body>
-<!-- Navbar Section Start -->
+    <!-- Navbar Section Start -->
     <header id="full_nav">
         <div class="header">
             <div class="container">
                 <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand" href="index.html">
-                        <img decoding="async" src="./images/logo.png" alt="">
+                        <img decoding="async" src="./images/Gsa_logo.png" alt="">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
                         aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,25 +48,25 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
+                                <a class="nav-link" href="team.html">Team</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="product.html">Product</a>
+                                <a class="nav-link" href="pastEvents.html">Past Events</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link" href="gallery.html">Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Contact</a>
+                                <a class="nav-link active" href="contact.html">Contact</a>
                             </li>
                         </ul>
 
                         <div class="header_right">
                             <div class="text-lg-end">
-                                <span>Follow Us!</span>
-                                <span class="insta_follow">york.gsa</span>
+                                <span id="insta_text">Follow Us on Instagram</span>
+                                <span class="insta_id">@york.gsa</span>
                             </div>
                         </div>
                     </div>
@@ -71,94 +76,89 @@
     </header>
     <!-- Navbar Section Exit -->
 
-    <!-- banner Section start -->
-    <section class="banner_section">
-        <div class="container">
-            <div class="banner-content">
-                <h1>Contact Us</h1>
-            </div>
+    <!-- Contact Section Start -->
+    <section class="contact_section mt-5">
+    <div class="container mt-5">
+        <div class="row justify-content-center mt-5">
+        <div class="col-12 text-center pb-4">
+            <h1>Get In Touch</h1>
+            <p class="section-subtitle">Have a question or idea? We’re just a message away.</p>
         </div>
-    </section>
-    <!-- banner section exit -->
 
-    <!--Contact Section Start-->
-    <section class="contact_section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center pb-5">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">The Passage Experienced A Surge In Popularity During The 1960s When
-                        Again During The 90s As Desktop Publishers</p>
-                </div>
-                <div class="col-12 contact-form">
-                    <div class="row">
-                        <div class="col-lg-7 mb-5">
-                            <form class="row g-3">
-                                <div class="col-md-6 mb-4">
-                                    <input type="text" class="form-control" placeholder="Your Name *" required="">
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <input type="email" class="form-control" placeholder="Your Email *" required="">
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <input type="text" class="form-control" placeholder="Your Address *" required="">
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <input type="number" class="form-control" placeholder="Your Phone *" required="">
-                                </div>
-                                <div class="col-12 mb-4">
-                                    <input class="form-control" placeholder="your Message">
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn main-btn">Send Message</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-lg-5 mb-5">
-                            <div class="content-box ms-sm-5">
-                                <ul class="info-box clearfix">
-                                    <li>
-                                        <i class="fas fa-phone-alt"></i>
-                                        <p>Any Questions? Call us</p>
-                                        <div>
-                                            <a href="#">+91 123 123 1234</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="far fa-envelope-open"></i>
-                                        <p>Any Questions? Email us</p>
-                                        <div>
-                                            <a href="#">info@example.com</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-lg-7 mb-5">
+            <form class="row g-3 contact-form" novalidate>
+            <div class="col-md-6 mb-4">
+                <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Your Name *"
+                required
+                aria-label="Your Name"
+                />
+            </div>
+            <div class="col-md-6 mb-4">
+                <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Your Email *"
+                required
+                aria-label="Your Email"
+                />
+            </div>
+            <div class="col-12 mb-4">
+                <textarea
+                class="form-control"
+                id="message"
+                rows="5"
+                placeholder="Your Message *"
+                required
+                aria-label="Your Message"
+                ></textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn main-btn w-100">Send Message</button>
+            </div>
+            </form>
+        </div>
+
+        <div class="col-lg-5 mb-5">
+            <div class="content-box ms-sm-5">
+            <ul class="info-box clearfix">
+                <li>
+                <i class="far fa-envelope-open"></i>
+                <p>Any Questions? Email us</p>
+                <a href="mailto:yorku.gsa1@gmail.com" class="email-link">yorku.gsa1@gmail.com</a>
+                </li>
+            </ul>
             </div>
         </div>
+        </div>
+    </div>
     </section>
-    <!--Contact Section Exit -->
+    <!-- Contact Section End -->
+
 
     <!-- Footer section Start-->
     <section class="footer_wrapper mt-3 mt-md-0">
         <div class="container px-5 px-lg-0">
             <div class="row">
                 <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
-                    <h5>Nimboo</h5>
-                    <p class="mb-4 ps-0 company_details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                        dignissim erat ut laoreet
-                        pharetra....</p>
+                    <h5>YGSA</h5>
+                    <p class="mb-4 ps-0 company_details">Celebrating Heritage, Empowering Voices,<br>
+                    Building Bonds Across Cultures,<br>
+                    Together as One — The Heart of GSA.
+                    </p>
                     <div class="contact-info">
                         <ul class="list-unstyled">
-                            <li><a href="#"><i class="fa fa-home me-3"></i> No. 96, South City, London</a></li>
-                            <li><a href="#"><i class="fa fa-phone me-3"></i>+1 222 3333</a></li>
-                            <li><a href="#"><i class="fa fa-envelope me-3"></i>info@example.com</a></li>
+                            <li><a href="#"><i class="fa fa-home me-3"></i> York University, Toronto</a></li>
+                            <!-- <li><a href="#"><i class="fa fa-phone me-3"></i>+1 222 3333</a></li> -->
+                            <li><a href="mailto:yorku.gsa1@gmail.com"><i class="fa fa-envelope me-3"></i>yorku.gsa1@gmail.com</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                <!-- <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
                     <h5>Customer Support</h5>
                     <ul class="link-widget p-0">
                         <li><a href="#">About Us</a></li>
@@ -177,7 +177,7 @@
                         <li><a href="#">Accessories</a></li>
                         <li><a href="#">Term Of Use</a></li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
                     <h5>Newsletter</h5>
                     <div class="form-group mb-4">
@@ -186,16 +186,14 @@
                     </div>
                     <h5>Stay Connected</h5>
                     <ul class="social-network d-flex align-items-center p-0">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://www.instagram.com/york.gsa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/york-gujarati-students-association/"><i class="fab fa-linkedin-in"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="container-fluid copyright-section">
-            <p>Copyright <a href="#">© CODE4EDUCATION.</a> All Rights Reserved</p>
+            <p>Copyright <a href="#">© YGSA </a> All Rights Reserved</p>
         </div>
     </section>
     <!-- Footer Section Exit  -->
@@ -212,6 +210,6 @@
 
     <!-- Custom JS -->
     <script src="js/main.js"></script>
-
+    
 </body>
 </html>
