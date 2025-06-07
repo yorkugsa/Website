@@ -61,8 +61,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="buyTicket.html">Buy Tickets</a>
+                            </li>
                         </ul>
-
                         <div class="header_right">
                             <div class="text-lg-end">
                                 <span id="insta_text">Follow Us on Instagram</span>
@@ -236,44 +238,32 @@
                 <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
                     <h5>YGSA</h5>
                     <p class="mb-4 ps-0 company_details">Celebrating Heritage, Empowering Voices,<br>
-                    Building Bonds Across Cultures,<br>
-                    Together as One — The Heart of GSA.
+                        Building Bonds Across Cultures,<br>
+                        Together as One — The Heart of GSA.
                     </p>
                     <div class="contact-info">
                         <ul class="list-unstyled">
                             <li><a href="#"><i class="fa fa-home me-3"></i> York University, Toronto</a></li>
-                            <!-- <li><a href="#"><i class="fa fa-phone me-3"></i>+1 222 3333</a></li> -->
                             <li><a href="mailto:yorku.gsa1@gmail.com"><i class="fa fa-envelope me-3"></i>yorku.gsa1@gmail.com</a></li>
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
-                    <h5>Customer Support</h5>
-                    <ul class="link-widget p-0">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Product Returns</a></li>
-                        <li><a href="#">Wholesale Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
-                    <h5>Quick Links</h5>
-                    <ul class="link-widget p-0">
-                        <li><a href="#">Product</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Term Of Use</a></li>
-                    </ul>
-                </div> -->
+
                 <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
                     <h5>Newsletter</h5>
-                    <div class="form-group mb-4">
-                        <input type="email" class="form-control bg-transparent" placeholder="Enter Your Email Here">
-                        <button type="submit" class="btn main-btn">Subscribe</button>
+
+                    <!-- Newsletter Form Start -->
+                    <div id="subscribe-form">
+                        <form id="newsletterForm">
+                            <div class="form-group mb-2">
+                                <input type="email" name="email" id="emailInput" class="form-control bg-transparent" placeholder="Enter Your Email Here" required>
+                            </div>
+                            <button type="submit" class="btn main-btn">Subscribe</button>
+                        </form>
                     </div>
-                    <h5>Stay Connected</h5>
+                    <!-- Newsletter Form End -->
+
+                    <h5 class="mt-4">Stay Connected</h5>
                     <ul class="social-network d-flex align-items-center p-0">
                         <li><a href="https://www.instagram.com/york.gsa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a></li>
                         <li><a href="https://www.linkedin.com/company/york-gujarati-students-association/"><i class="fab fa-linkedin-in"></i></a></li>
@@ -281,11 +271,46 @@
                 </div>
             </div>
         </div>
+
         <div class="container-fluid copyright-section">
             <p>Copyright <a href="#">© YGSA </a> All Rights Reserved</p>
         </div>
     </section>
-    <!-- Footer Section Exit  -->
+    <!-- Footer Section Exit -->
+
+    <!-- Newsletter Script -->
+    <script>
+    document.getElementById("newsletterForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("emailInput").value.trim();
+        const formData = new FormData();
+        formData.append("email", email);
+
+        fetch("https://script.google.com/macros/s/AKfycbwNQsO7YCBuCl-eJ3E6uq56DUXB83yoZ_dX6NSbvZk7Xp44OjMx9hZ1gQEeCgCOEv3l/exec", {
+        method: "POST",
+        body: formData
+        })
+        .then(response => {
+        if (response.ok) {
+            return response.text();
+        } else {
+            throw new Error("Network response was not ok.");
+        }
+        })
+        .then(() => {
+        document.getElementById("subscribe-form").innerHTML =
+            "<p class='text-success mt-2'>🎉 Thank you for subscribing!</p>";
+        })
+        .catch(error => {
+        console.error("Subscription error:", error);
+        document.getElementById("subscribe-form").innerHTML =
+            "<p class='text-danger mt-2'>❌ Something went wrong. Please try again.</p>";
+        });
+    });
+    </script>
+
+
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

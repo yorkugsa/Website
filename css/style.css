@@ -929,50 +929,105 @@ Contact Page CSS
 
 /* Contact Info Box */
 .info-box {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+list-style: none;
+padding: 0;
+margin: 0;
 }
 
 .info-box li {
-  background: #ffffff;
-  padding: 1.8rem 2rem;
-  margin-bottom: 1.8rem;
-  border-left: 6px solid #014d28;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-  border-radius: 14px;
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+background: #ffffff;
+padding: 1.8rem 2rem;
+margin-bottom: 1.8rem;
+border-left: 6px solid #014d28;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+border-radius: 14px;
+transition: transform 0.3s ease;
+display: flex;
+align-items: center;
+gap: 1rem;
 }
 
 .info-box li:hover {
-  transform: translateY(-5px);
+transform: translateY(-5px);
 }
 
 .info-box i {
-  font-size: 2.4rem;
-  color: #014d28;
-  min-width: 40px;
-  text-align: center;
+font-size: 2.4rem;
+color: #014d28;
+min-width: 40px;
+text-align: center;
 }
 
 .info-box p {
-  margin: 0;
-  font-weight: 600;
-  color: #014d28;
-  font-size: 1.7rem;
-  flex: 1;
+margin: 0;
+font-weight: 600;
+color: #014d28;
+font-size: 1.7rem;
+flex: 1;
 }
 
 .info-box a {
-  font-size: 1.7rem;
-  color: #333;
-  text-decoration: underline;
-  transition: color 0.3s ease;
+font-size: 1.7rem;
+color: #333;
+text-decoration: underline;
+transition: color 0.3s ease;
 }
 
 .info-box a:hover {
-  color: #2b7fdf;
+color: #2b7fdf;
+}
+
+
+
+/* Buy tickets page */
+
+
+.custom-btn {
+background: linear-gradient(45deg, #f05454, #ffb347);
+color: white;
+font-weight: 600;
+padding: 10px 25px;
+border-radius: 30px;
+transition: background 0.3s ease;
+border: none;
+font-size: 1.5rem;
+}
+.custom-btn:hover {
+background: linear-gradient(45deg, #ff6b6b, #ffcc7a);
+color: #222;
+}
+
+.countdown {
+font-size: 1.5rem;
+font-weight: 600;
+color: #555;
+margin-top: 10px;
+}
+
+.countdown span {
+background: #f05454;
+color: white;
+padding: 5px 12px;
+border-radius: 8px;
+margin: 0 3px;
+display: inline-block;
+min-width: 45px;
+}
+
+.card-img-top {
+object-fit: cover;
+height: 200px;
+}
+
+.card{
+background-color: #d7f3d8;
+}
+
+
+
+/* Subscribe forms */
+
+#subscribe-form p {
+  font-weight: bold;
+  
 }
