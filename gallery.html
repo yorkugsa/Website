@@ -86,58 +86,11 @@
             <div class="row mt-5">
                 <div class="col-12 text-center pb-5">
                     <h1>Our Gallery</h1>
-                    <p class="section-subtitle">Snapshots of our smiles, steps, and stories — memories that make us YGSA.</p>
+                    <p class="section-subtitle">
+                        Snapshots of our smiles, steps, and stories — memories that make us YGSA.
+                    </p>
                 </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <a href="images/gallery/g-1.jpg" data-lightbox="image" data-title="Culture Fest 2024">
-                        <img decoding="async" src="images/gallery/g-1.jpg" class="img-fluid rounded-3">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <a href="images/gallery/g-2.jpg" data-lightbox="image" data-title="Holi 2024">
-                        <img decoding="async" src="images/gallery/g-2.jpg" class="img-fluid rounded-3">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <a href="images/gallery/g-3.jpg" data-lightbox="image" data-title="Team Social at Wonderland">
-                        <img decoding="async" src="images/gallery/g-3.jpg" class="img-fluid rounded-3">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <a href="images/gallery/g-4.jpg" data-lightbox="image" data-title="Toofan 2024">
-                        <img decoding="async" src="images/gallery/g-4.jpg" class="img-fluid rounded-3">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <a href="images/gallery/g-5.jpg" data-lightbox="image" data-title="Toofan 2024">
-                        <img decoding="async" src="images/gallery/g-5.jpg" class="img-fluid rounded-3">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <a href="images/gallery/g-6.jpg" data-lightbox="image" data-title="Toofan 2024">
-                        <img decoding="async" src="images/gallery/g-6.jpg" class="img-fluid rounded-3">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <a href="images/gallery/g-7.jpg" data-lightbox="image" data-title="Navrangi Raat 2024">
-                        <img decoding="async" src="images/gallery/g-7.jpg" class="img-fluid rounded-3">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <a href="images/gallery/g-8.jpg" data-lightbox="image" data-title="Navrangi Raat 2024">
-                        <img decoding="async" src="images/gallery/g-8.jpg" class="img-fluid rounded-3">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <a href="images/gallery/g-9.jpg" data-lightbox="image" data-title="Navrangi Raat 2024">
-                        <img decoding="async" src="images/gallery/g-9.jpg" class="img-fluid rounded-3">
-                    </a>
-                </div>
-                <!-- <div class="col-sm-6 col-lg-4 mb-4">
-                    <a href="images/gallery/g-9.jpg" data-lightbox="image" data-title="Navrangi Raat 2024">
-                        <img decoding="async" src="images/gallery/g-9.jpg" class="img-fluid rounded-3">
-                    </a>
-                </div> -->
+                <!-- Dynamic event headings + images will be inserted here -->
             </div>
         </div>
     </section>
@@ -161,26 +114,6 @@
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
-                    <h5>Customer Support</h5>
-                    <ul class="link-widget p-0">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Product Returns</a></li>
-                        <li><a href="#">Wholesale Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
-                    <h5>Quick Links</h5>
-                    <ul class="link-widget p-0">
-                        <li><a href="#">Product</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Term Of Use</a></li>
-                    </ul>
-                </div> -->
                 <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
                     <h5>Stay Connected</h5>
                     <ul class="social-network d-flex align-items-center p-0">
@@ -208,6 +141,40 @@
 
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+
+    <script>
+        fetch('js/gallery.json')
+            .then(response => response.json())
+            .then(galleryData => {
+                const galleryContainer = document.querySelector('.gallery_section .row');
+
+                galleryData.forEach(eventBlock => {
+                    // Insert event title
+                    const headingHTML = `
+                        <div class="col-12">
+                            <h2 class="event-title text-start" style="border-left-color: ${eventBlock.color}">${eventBlock.event}</h2>
+                        </div>
+                    `;
+                    galleryContainer.insertAdjacentHTML('beforeend', headingHTML);
+
+                    // Insert all images
+                    eventBlock.images.forEach(img => {
+                        const imageHTML = `
+                            <div class="col-sm-6 col-lg-4 mb-4">
+                                <a href="${img.src}" data-lightbox="image" data-title="${img.title}">
+                                    <img decoding="async" src="${img.src}" class="img-fluid rounded-3">
+                                </a>
+                            </div>
+                        `;
+                        galleryContainer.insertAdjacentHTML('beforeend', imageHTML);
+                    });
+                });
+            })
+            .catch(error => {
+                console.error("Error loading gallery:", error);
+            });
+    </script>
+
     
 </body>
 </html>

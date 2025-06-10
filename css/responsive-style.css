@@ -108,7 +108,7 @@
 
     /* mobile screen background for banner */
     .banner_section {
-    background: url('/images/banner-slide/Banner-tablet.jpg') no-repeat center center;
+    background: url('/images/banner-slide/Banner-mobile.jpg') no-repeat center center;
     background-size: cover;
     }
 
@@ -159,7 +159,7 @@
 
     /* mobile screen background for banner */
     .banner_section {
-    background: url('/images/banner-slide/Banner-tablet.jpg') no-repeat center center;
+    background: url('/images/banner-slide/Banner-mobile.jpg') no-repeat center center;
     background-size: cover;
     }
 
