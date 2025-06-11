@@ -1,215 +1,220 @@
-/* Media Query 1170px */
-@media (max-width:1170px) {
+/* ============================
+   Media Query: max-width 1200px
+============================ */
+@media (max-width: 1200px) {
+  /* General */
+  .section-subtitle {
+    max-width: 60%;
+  }
 
-    /* General CSS */
-    .section-subtitle {
-        max-width: 60%;
-    }
+  /* Navbar */
+  .header .navbar {
+    background-size: cover;
+    padding: 2rem;
+  }
 
-    /* 01 Navbar CSS */
-    .header .navbar {
-        background-size: cover;
-        padding: 2rem;
-    }
+  .header .navbar-nav {
+    margin-top: 2rem;
+  }
 
-    .header .navbar-nav {
-        margin-top: 2rem;
-    }
+  .header .navbar-nav .nav-link,
+  .header .header_right span {
+    padding: 0.2rem 0.5rem;
+    margin-bottom: 1rem;
+  }
 
-    .header .navbar-nav .nav-link {
-        padding: 0.2rem 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .header .header_right span {
-        padding: 0.2rem 0.5rem;
-    }
-
-    /* 02 Banner Section */
-    .banner_section .carousel-item {
-        height: 90vh;
-    }
+  /* Banner */
+  .banner_section .carousel-item {
+    height: 90vh;
+  }
 }
 
-/* Media Query 991px */
-@media (max-width:991px) {
+/* ============================
+   Media Query: max-width 992px
+============================ */
+@media (max-width: 992px) {
+  /* Navbar */
+  .header .navbar {
+    padding: 1rem 2rem;
+  }
 
-    /* 01 Navbar CSS */
-    .header .navbar {
-        background-size: cover;
-        padding: 1rem 2rem;
-    }
-
-    .header .navbar-nav {
-        margin-top: 2rem;
-    }
-
-    .header .navbar-nav .nav-link {
-        padding: 0.2rem 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .header .header_right span {
-        padding: 0.2rem 0.5rem;
-    }
-
-    /* tablet screen background for banner */
-    .banner_section {
-    background: url('/images/banner-slide/Banner-tablet.jpg') no-repeat center center;
+  /* Tablet Banner Background */
+  .banner_section {
+    background: url('../images/banner-slide/Banner-tablet.jpg') no-repeat center center;
     background-size: cover;
-    }
+  }
 
-    /* General CSS */
-    .about .banner_section,
-    .product .banner_section,
-    .Gallery .banner_section,
-    .contact .banner_section {
-        padding-top: 12.5rem;
-        padding-bottom: 3rem;
-    }
+  /* Subpage Banner Padding */
+  .about .banner_section,
+  .product .banner_section,
+  .Gallery .banner_section,
+  .contact .banner_section {
+    padding-top: 12.5rem;
+    padding-bottom: 3rem;
+  }
 
-    /* Past Events Page */
-    .event_section .event-card img {
+  /* Past Events */
+  .event_section .event-card img {
     max-height: 250px;
-    }
-    .event_section h2 {
-        font-size: 2rem;
-    }
-    .event_section .event-content {
-        padding: 1.8rem 2rem;
-    }
-    .event_section .event-details p {
-        font-size: 1.1rem;
-    }
+  }
 
+  .event_section h2 {
+    font-size: 2rem;
+  }
+
+  .event_section .event-content {
+    padding: 1.8rem 2rem;
+  }
+
+  .event_section .event-details p {
+    font-size: 1.1rem;
+  }
 }
 
-/* Media Query 767px */
-@media (max-width:767px) {
+/* ============================
+   Media Query: max-width 768px
+============================ */
+@media (max-width: 768px) {
+  html, body {
+    font-size: 8px;
+  }
 
-    /* General CSS */
-    body,
-    html {
-        font-size: 8px;
-    }
+  .section-subtitle {
+    max-width: 80%;
+  }
 
-    .section-subtitle {
-        max-width: 80%;
-    }
-
-    /* 02 Banner Section */
-    .banner_section {
-        min-height: 70vh;
-    }
-
-    .banner_section .carousel-item {
-        height: 70vh;
-    }
-
-    /* mobile screen background for banner */
-    .banner_section {
-    background: url('/images/banner-slide/Banner-mobile.jpg') no-repeat center center;
+  /* Mobile Banner */
+  .banner_section {
+    min-height: 70vh;
+    background: url('../images/banner-slide/Banner-mobile.jpg') no-repeat center center;
     background-size: cover;
-    }
+  }
 
-    .about_section .section-title {
+  .banner_section .carousel-item {
+    height: 70vh;
+  }
+
+  /* About Section */
+  .about_section .section-title {
     font-size: 2.2rem;
-    } 
+  }
 
-    .about_section .section-subtitle {
-        font-size: 1rem;
-    }
+  .about_section .section-subtitle {
+    font-size: 1rem;
+  }
 
-    .about_section .about-details p {
-        font-size: 0.95rem;
-    }
+  .about_section .about-details p {
+    font-size: 0.95rem;
+  }
 
-    .team-card {
+  /* Team Cards */
+  .team-card {
     padding: 1.2rem 1rem 1.5rem;
-    }
+  }
 
-    .team-img-wrapper {
-        width: 110px;
-        height: 110px;
-    }
+  .team-img-wrapper {
+    width: 110px;
+    height: 110px;
+  }
 
-    /* contact page */
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 1.1rem;
-    }
-    
-    .contact-form .main-btn {
-        font-size: 1.5rem;
-        padding: 0.8rem 1.8rem;
-    }
+  /* Contact Form */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.1rem;
+  }
 
-    .info-box li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .contact-form .main-btn {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.8rem;
+  }
 
-    .info-box i {
-        margin-bottom: 0.8rem;
-    }
-} 
+  .info-box li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-/* Media Query 590px */
-@media (max-width:590px) {
+  .info-box i {
+    margin-bottom: 0.8rem;
+  }
+}
 
-    /* mobile screen background for banner */
-    .banner_section {
-    background: url('/images/banner-slide/Banner-mobile.jpg') no-repeat center center;
+/* ============================
+   Media Query: max-width 576px
+============================ */
+@media (max-width: 576px) {
+  html, body {
+    font-size: 7px;
+  }
+
+  /* Banner */
+  .banner_section {
+    background: url('../images/banner-slide/Banner-mobile.jpg') no-repeat center center;
     background-size: cover;
-    }
+  }
 
-    /* Team page CSS */
-    body,
-    html {
-        font-size: 7px;
-    }
-
-    .team-img-wrapper {
+  /* Team */
+  .team-img-wrapper {
     width: 90px;
     height: 90px;
-    }
+  }
 
-    .team-name {
-        font-size: 1.1rem;
-    }
+  .team-name {
+    font-size: 1.1rem;
+  }
 
-    .team-program {
-        font-size: 0.9rem;
-    }
+  .team-program {
+    font-size: 0.9rem;
+  }
 
-    /* Past Events Page */
-    .event_section .event-card img {
+  /* Past Events */
+  .event_section .event-card img {
     max-height: 200px;
-    }
-    .event_section h2 {
-        font-size: 1.8rem;
-    }
-    .event_section .event-content {
-        padding: 1.2rem 1.5rem;
-    }
-    .event_section .event-details p {
-        font-size: 1rem;
-    }
-    .event_section .btn.main-btn {
-        padding: 0.5rem 1.5rem;
-        font-size: 1rem;
-    }
+  }
 
-    /* Contact Page */
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 1rem;
-    }
+  .event_section h2 {
+    font-size: 1.8rem;
+  }
 
-    .contact-form .main-btn {
-        font-size: 1.4rem;
-        padding: 0.6rem 1.5rem;
-    }
+  .event_section .event-content {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .event_section .event-details p {
+    font-size: 1rem;
+  }
+
+  .event_section .btn.main-btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Contact Form */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .contact-form .main-btn {
+    font-size: 1.4rem;
+    padding: 0.6rem 1.5rem;
+  }
 }
 
-      
+/* ============================
+   Media Query: max-width 400px
+============================ */
+@media (max-width: 400px) {
+  /* Optional: Add fine adjustments here for very small devices */
+  .team-name {
+    font-size: 1rem;
+  }
+
+  .contact-form .main-btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+}
