@@ -38,7 +38,7 @@
     padding: 1rem 2rem;
   }
 
-  /* Tablet Banner Background */
+  /* Tablet Banner Background (FIXED path + case-sensitive) */
   .banner_section {
     background: url('../images/banner-slide/Banner-tablet.jpg') no-repeat center center;
     background-size: cover;
@@ -83,7 +83,7 @@
     max-width: 80%;
   }
 
-  /* Mobile Banner */
+  /* Mobile Banner Background (FIXED path + case-sensitive) */
   .banner_section {
     min-height: 70vh;
     background: url('../images/banner-slide/Banner-mobile.jpg') no-repeat center center;
@@ -204,7 +204,7 @@
    Media Query: max-width 400px
 ============================ */
 @media (max-width: 400px) {
-  /* Optional: Add fine adjustments here for very small devices */
+  /* Optional: Fine adjustments for very small screens */
   .team-name {
     font-size: 1rem;
   }
