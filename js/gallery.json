@@ -78,6 +78,10 @@
         "event": "Team Socials",
         "color": "#a83279",
         "images": [
+            { "src": "images/gallery/gallery_page/socials/social-16.JPEG", "title": "Team Social" },
+            { "src": "images/gallery/gallery_page/socials/social-15.JPEG", "title": "Team Social" },
+            { "src": "images/gallery/gallery_page/socials/social-14.JPG", "title": "Team Social" },
+            { "src": "images/gallery/gallery_page/socials/social-13.JPG", "title": "Team Social" },
             { "src": "images/gallery/gallery_page/socials/social-12.jpg", "title": "Team Social" },
             { "src": "images/gallery/gallery_page/socials/social-11.jpeg", "title": "Team Social" },
             { "src": "images/gallery/gallery_page/socials/social-10.jpeg", "title": "Team Social" },
