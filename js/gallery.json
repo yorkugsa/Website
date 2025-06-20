@@ -24,7 +24,6 @@
         "event": "Movie Night (Valentine's 2025)",
         "color": "#1f3c88",
         "images": [
-            { "src": "images/gallery/gallery_page/movie-night-valentines/mn-3.jpg", "title": "Movie Night - Valentines" },
             { "src": "images/gallery/gallery_page/movie-night-valentines/mn-2.jpg", "title": "Movie Night - Valentines" }
 
         ]
