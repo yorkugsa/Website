@@ -25,8 +25,7 @@
         "color": "#1f3c88",
         "images": [
             { "src": "images/gallery/gallery_page/movie-night-valentines/mn-3.jpg", "title": "Movie Night - Valentines" },
-            { "src": "images/gallery/gallery_page/movie-night-valentines/mn-2.jpg", "title": "Movie Night - Valentines" },
-            { "src": "images/gallery/gallery_page/movie-night-valentines/mn-1.jpg", "title": "Movie Night - Valentines" }
+            { "src": "images/gallery/gallery_page/movie-night-valentines/mn-2.jpg", "title": "Movie Night - Valentines" }
 
         ]
     },
@@ -90,7 +89,6 @@
             { "src": "images/gallery/gallery_page/socials/social-7.JPG", "title": "Team Social" },
             { "src": "images/gallery/gallery_page/socials/social-6.JPG", "title": "Team Social" },
             { "src": "images/gallery/gallery_page/socials/social-5.JPG", "title": "Team Social" },
-            { "src": "images/gallery/gallery_page/socials/social-4.jpeg", "title": "Team Social" },
             { "src": "images/gallery/gallery_page/socials/social-3.jpeg", "title": "Team Social" },
             { "src": "images/gallery/gallery_page/socials/social-2.jpeg", "title": "Team Social" },
             { "src": "images/gallery/gallery_page/socials/social-1.jpeg", "title": "Team Social" }
