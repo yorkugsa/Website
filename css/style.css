@@ -741,9 +741,143 @@ body {
   justify-content: flex-start;
 }
 
-/* .col-lg-2, .col-md-4, .col-sm-6 {
+/* Past Team Section Styling */
+.past-team-section-vertical {
+  background-color: #eefeea;
+  padding: 3rem 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.past-teams-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  color: #014d28;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #014d28;
+  padding-left: 1rem;
+  margin-bottom: 4rem;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.list-group-item {
+  border: none;
+  background-color: #ffffff;
+  margin-bottom: 0.3rem;
+  color: #014d28;
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 8px;
+  font-size: 2rem;
+  margin: 0.8rem;
+}
+
+.list-group-item:hover {
+  background-color: #d5f8c7;
+  color: #03262c;
+}
+
+.team-card-vertical {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(1, 77, 40, 0.15);
+  transition: all 0.4s ease;
+  margin-bottom: 1rem;
+  margin-left: 5rem;
+  margin-top: 7.8rem;
+}
+
+.year-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #014d28;
+  margin-bottom: 2rem;
+}
+
+.past-team-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.past-team-list li {
+  margin-bottom: 0.5rem;
+  color: #3a6f47;
+  font-size: 1.5rem;
+}
+
+#teamYearList a.active {
+  background-color: #014d28;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #014d28aa;
+  transition: background-color 0.3s ease;
+}
+
+
+
+/* Scale up + subtle shadow pulse on hover */
+#teamYearList a {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-} */
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#teamYearList a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(1, 77, 40, 0.4);
+  border-radius: 6px;
+}
+
+/* Optional: slight pulse animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(1, 77, 40, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(1, 77, 40, 0.6);
+  }
+}
+
+#teamYearList a:hover {
+  animation: pulseGlow 1.5s infinite;
+}
+
+#teamYearList a {
+  position: relative;
+  color: #014d28; /* Normal text color */
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+/* Text color transition on hover and active */
+#teamYearList a:hover,
+#teamYearList a.active {
+  color: #028a3d; /* brighter green on hover/active */
+}
+
+/* Underline container */
+#teamYearList a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #028a3d;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Animate underline sliding in on hover and active */
+#teamYearList a:hover::after,
+#teamYearList a.active::after {
+  width: 100%;
+}
+
 
 
 

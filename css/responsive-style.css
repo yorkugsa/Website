@@ -69,6 +69,10 @@
   .event_section .event-details p {
     font-size: 1.1rem;
   }
+  
+  .team-card-vertical {
+    margin-left: 0rem;
+  }
 }
 
 /* ============================
@@ -136,6 +140,27 @@
   .info-box i {
     margin-bottom: 0.8rem;
   }
+
+  /* Past team edit */
+   .past-teams-heading {
+    text-align: center;
+    border-left: none;
+    border-bottom: 3px solid #014d28;
+    padding-bottom: 0.5rem;
+  }
+
+  .list-group-item {
+    text-align: center;
+  }
+
+  .year-title {
+    text-align: center;
+  }
+
+  .team-card-vertical {
+    margin-left: 0rem;
+  }
+
 }
 
 /* ============================
@@ -198,6 +223,10 @@
     font-size: 1.4rem;
     padding: 0.6rem 1.5rem;
   }
+
+  .team-card-vertical {
+    margin-left: 0rem;
+  }
 }
 
 /* ============================
@@ -216,5 +245,9 @@
 
   .section-subtitle {
     font-size: 0.9rem;
+  }
+
+  .team-card-vertical {
+    margin-left: 0rem;
   }
 }
