@@ -54,12 +54,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="pastEvents.html">Past Events</a>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="gallery.html">Gallery</a>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sponsor.html">Sponsors</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="buyTicket.html">Buy Tickets</a>
@@ -79,6 +78,8 @@
     </header>
     <!-- Navbar Section Exit -->
 
+<div id="swup" class="transition-fade">
+
     <!-- Ticket Section Start -->
     <section class="ticket_section mt-5">
     <div class="container">
@@ -92,7 +93,7 @@
         <div class="row g-4">
         <!-- ==== IF EVENTS ARE ACTIVE, UNCOMMENT BELOW ==== -->
         
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
             <div class="card h-100 shadow-sm">
             <img src="images/upcomingEvents/Navrangi Raat.png" class="card-img-top" alt="Navrangi raat 2.0 Banner" />
             <div class="card-body text-center">
@@ -104,7 +105,7 @@
                 </button>
             </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- <div class="col-md-6">
             <div class="card h-100 shadow-sm">
@@ -122,7 +123,7 @@
        
 
         <!-- ==== IF NO EVENTS, KEEP THIS ACTIVE ==== -->
-        <!-- <div class="col-12">
+        <div class="col-12">
             <div class="no-events-card text-center py-5 px-4">
             <div class="emoji mb-3">🎫</div>
             <h2 class="fancy-title">Stay Tuned!</h2>
@@ -131,7 +132,7 @@
             </p>
             </div>
         </div>
-        </div> -->
+        </div>
 
 
     </div>
@@ -222,6 +223,7 @@
     document.addEventListener('DOMContentLoaded', initializeCountdown);
     </script>
 
+</div>
 
     <!-- Footer section Start-->
     <section class="footer_wrapper mt-3 mt-md-0">
@@ -269,5 +271,10 @@
     <!-- Custom JS -->
     <script src="js/main.js"></script>
     
+    <script src="https://unpkg.com/swup@4"></script>
+    <script>
+    const swup = new Swup();
+    </script>
+
 </body>
 </html>

@@ -1228,3 +1228,62 @@ background-color: #d7f3d8;
   font-weight: bold;
   
 }
+
+
+/* Smooth Page Transition (Swup) */
+.transition-fade {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+html.is-animating .transition-fade {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.nav-link.active {
+  color: #08c95c !important;
+  font-weight: 600;
+  border-bottom: 2px solid #08c95c;
+  transition: all 0.3s ease;
+}
+
+.transition-fade {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+
+
+/* Sponsors page */
+
+.sponsors-section {
+  padding: 80px 0;
+}
+
+.sponsor-card {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #597b5f;
+  text-align: center;
+  margin: 50px;
+  margin-top: auto;
+}
+
+.sponsor-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  padding: 20px;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+

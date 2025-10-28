@@ -54,12 +54,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="pastEvents.html">Past Events</a>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="gallery.html">Gallery</a>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sponsor.html">Sponsors</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="buyTicket.html">Buy Tickets</a>
@@ -79,13 +78,15 @@
     </header>
     <!-- Navbar Section Exit -->
 
+<div id="swup" class="transition-fade">
+
     <!-- About Section start -->
      <section class="about_section mt-5">
         <div class="container mt-5">
             <div class="row justify-content-center">
                 <div class="col-12 text-center pb-5">
                     <h1 class="">Meet the Fam</h1>
-                    <p class="section-subtitle">From dandiya to deadlines — we’ve got each other’s back!</p>
+                    <p class="section-subtitle mt-5 mb-2">From dandiya to deadlines — we’ve got each other’s back!</p>
                 </div>
             </div>
     </section>
@@ -308,7 +309,7 @@
 
     <!-- Past Team Section End -->
 
-
+</div>
 
     <!-- Footer section Start-->
     <section class="footer_wrapper mt-3 mt-md-0">
@@ -398,6 +399,33 @@
     });
     });
 
+    </script>
+
+    <!-- Swup Page Transition -->
+    <script src="https://unpkg.com/swup@4"></script>
+
+    <script>
+    const swup = new Swup();
+
+    function setActiveNav() {
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+        });
+    }
+
+    // Run once when page loads
+    document.addEventListener("DOMContentLoaded", setActiveNav);
+
+    // Run again after Swup loads a new page
+    swup.hooks.on('page:view', setActiveNav);
     </script>
 
   
